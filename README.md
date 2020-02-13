@@ -3,14 +3,14 @@
 docker-composeでSwaggerの開発環境を用意する。
 
 ## コマンド一覧
-起動
+起動  
 `$ docker-compose up -d`
 
-停止
+停止  
 `$ docker-compose down`
 
-ログ
-`$ docker-compose logs -f swagger-watch`
+ログ  
+`$ docker-compose logs -f swagger-watch`  
 swagger-watchはコンテナ名  
 
 ## コンテナ一覧
