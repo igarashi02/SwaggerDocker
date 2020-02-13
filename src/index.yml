@@ -1,0 +1,34 @@
+openapi: 3.0.0
+info:
+  title: Sample API
+  description: A short description of API.
+  termsOfService: http://example.com/terms/
+  contact:
+    name: API support
+    url: http://www.example.com/support
+    email: support@example.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+servers:
+  - url: https://dev.sample-server.com/v1
+    description: Development server
+  - url: https://stg.sample-server.com/v1
+    description: Staging server
+  - url: https://api.sample-server.com/v1
+    description: Production server
+paths:
+  $ref: './paths/index.yml'
+components:
+  $ref: './components/index.yml'
+security:
+  - api_key: []
+tags:
+  - name: users
+    description: Access to Users
+  - name: products
+    description: Access to Products
+externalDocs:
+  description: Find more info here
+  url: https://example.com

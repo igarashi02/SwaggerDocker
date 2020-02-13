@@ -1,0 +1,13 @@
+{
+  "name": "sw_merger",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "watch": "watch \"./node_modules/.bin/swagger-merger -i ./src/index.yml -o ./dist/documents.yaml\" ./src"
+  },
+  "dependencies": {
+    "swagger-merger": "^1.4.3",
+    "watch": "^1.0.2"
+  }
+}

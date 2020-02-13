@@ -1,0 +1,4 @@
+/todos:
+  $ref: './todos/todos.yml'
+/todos/{todoId}:
+  $ref: './todos/todos_todoId.yml'

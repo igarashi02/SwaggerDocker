@@ -1,0 +1,46 @@
+get:
+  summary: Get Todos
+  operationId: listTodos
+  tags:
+    - todos
+  parameters:
+    - name: limit
+      in: query
+      description: limit
+      required: false
+      schema:
+        type: integer
+        format: int32
+  responses:
+    '200':
+      description: description
+      headers:
+        x-next:
+          description: description
+          schema:
+            type: string
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Todos"
+    default:
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+
+post:
+  summary: Create Todo
+  operationId: createTodos
+  tags:
+    - todos
+  responses:
+    '201':
+      description: Null response
+    default:
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"

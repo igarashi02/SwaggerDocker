@@ -1,0 +1,25 @@
+get:
+  summary: Info for a specific todos
+  operationId: showTodoById
+  tags:
+    - todos
+  parameters:
+    - name: todoId
+      in: path
+      required: true
+      description: The id of the todo to retrieve
+      schema:
+        type: string
+  responses:
+    '200':
+      description: Expected response
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Todos"
+    default:
+      description: error
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
