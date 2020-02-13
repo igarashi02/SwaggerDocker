@@ -2,6 +2,12 @@
 
 docker-composeでSwaggerの開発環境を用意する。
 
+## 概要
+srcディレクトリ内の分割されたSwaggerファイルを更新するとswagger-watchコンテナが変更を検知して分割ファイルをマージし、distディレクトリに書き出す。  
+swagger-ui, swagger-apiコンテナはdistディレクトリを参照し、Swaggerファイルを元に、APIドキュメントとモックサーバを起動する。  
+
+分割したSwaggerファイルをvimで編集して、自動マージしてWebUIでAPI仕様を確認するためのもの。  
+
 ## コマンド一覧
 起動  
 `$ docker-compose up -d`
