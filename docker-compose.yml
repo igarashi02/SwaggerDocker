@@ -22,8 +22,8 @@ services:
     ports:
       - "8083:8000"
     volumes:
-      - ./dist/documents.yaml:/documents.yaml
-    entrypoint: /usr/local/bin/apisprout /documents.yaml --watch
+      - ./dist:/docs
+    entrypoint: /usr/local/bin/apisprout /docs/documents.yaml --watch
 
   swagger-watch:
     image: node:latest
